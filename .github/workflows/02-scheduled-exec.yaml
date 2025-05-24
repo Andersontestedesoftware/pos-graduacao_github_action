@@ -1,5 +1,5 @@
 # nome do nosso 'pipeline'
-name: 'Execução Manual Agendada'
+name: 'Execução Agendada E2E'
 # regras de disparo (gatilhos/triggers)
 # gatilho de exec manual = workflow_dispatch
 on:
