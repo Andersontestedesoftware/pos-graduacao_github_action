@@ -1,5 +1,5 @@
 # nome do nosso 'pipeline'
-name: 'Execução por Deployy'
+name: 'Execução por Deploy'
 
 # regras de disparo (gatilhos/triggers)
 # gatilho de exec manual = workflow_dispatch
@@ -44,7 +44,6 @@ jobs:
         run: yarn run e2e
       - uses: actions/upload-artifact@v4
         if: ${{ !cancelled() }}
-
         with:
             name: relatorio
             path: ./playwright-report
