@@ -1,5 +1,5 @@
 # nome do nosso 'pipeline'
-name: 'Execução por Deploy'
+name: 'Execução por Deployy'
 
 # regras de disparo (gatilhos/triggers)
 # gatilho de exec manual = workflow_dispatch
@@ -14,6 +14,8 @@ jobs:
   e2e-tests:
     # maquina que o job vai executar
     runs-on: ubuntu-latest
+    #condição
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
 
     # passos do script de build
     steps:
